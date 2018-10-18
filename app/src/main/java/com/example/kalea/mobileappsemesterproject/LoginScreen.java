@@ -7,10 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class LoginScreen extends AppCompatActivity {
 
     Button loginButton, createAccountButton;
     EditText emailLogin, passwordLogin;
+    private FirebaseAuth mAuth;
+    private FirebaseDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +28,9 @@ public class LoginScreen extends AppCompatActivity {
         createAccountButton = (Button)findViewById(R.id.createAccountButton);
         emailLogin = (EditText) findViewById(R.id.emailLogin);
         passwordLogin = (EditText) findViewById(R.id.passwordLogin);
-        final String emailCorrect = "heyYou@gmail.com";
-        final String passwordCorrect = "heyYou";
+        mAuth = FirebaseAuth.getInstance();
+
+
 
         createAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,10 +46,15 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent goToListOfTaskLists = new Intent(LoginScreen.this, ListOfTaskLists.class);
-                if(emailLogin.getText().toString().equals(emailCorrect) &&
-                        passwordLogin.getText().toString().equals(passwordCorrect))
                 startActivity(goToListOfTaskLists);
             }
         });
     }
+    @Override
+    public void onStart(){
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+       // updateUI(currentUser);
+    }
+
 }
