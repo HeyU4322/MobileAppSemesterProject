@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "465358070580",
+    "firebase_url": "https://heyu4322-218918.firebaseio.com",
+    "project_id": "heyu4322-218918",
+    "storage_bucket": "heyu4322-218918.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465358070580:android:a52699a0efc8f57c",
+        "android_client_info": {
+          "package_name": "com.example.kalea.mobileappsemesterproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465358070580-v9f1e2doj6df0f082amj722c8niggg3d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kalea.mobileappsemesterproject",
+            "certificate_hash": "434b566692d96342d6cead233c0d5e6a25de6c78"
+          }
+        },
+        {
+          "client_id": "465358070580-0i0bjndbue3pvks022atpt65iv52fiv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kalea.mobileappsemesterproject",
+            "certificate_hash": "c3520b89630ae4079f4148bc202167553f64539c"
+          }
+        },
+        {
+          "client_id": "465358070580-h1aluagtn0ilv9q0abk6cq7vu4ivf291.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIO8FQWKSAwXZ3xCXrxAHwMEPgTZi7D0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465358070580-h1aluagtn0ilv9q0abk6cq7vu4ivf291.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

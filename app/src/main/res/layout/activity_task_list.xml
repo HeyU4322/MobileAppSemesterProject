@@ -7,116 +7,118 @@
     tools:context=".TaskList"
     tools:layout_editor_absoluteY="25dp">
 
-    <TextView
-        android:id="@+id/textView10"
+    <EditText
+        android:id="@+id/newTask"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:hint="Add New Task"
+        android:inputType="text"
+        android:textColor="#808080"
+        app:layout_constraintBottom_toBottomOf="@+id/addTask"
+        app:layout_constraintEnd_toStartOf="@+id/addTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addTask" />
+
+    <Button
+        android:id="@+id/addTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="onClick"
+        android:text="Add"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newTask"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginStart="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/clearTaskList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTask">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/clearTaskList"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginStart="20dp"
+        android:onClick="onClick"
+        android:text="Clear Task List"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="88dp"
-        android:text="Task List 1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginStart="16dp"
-        android:text="Location:"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/textView12"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="Location"
+        app:layout_constraintBottom_toTopOf="@+id/addTask"
+        app:layout_constraintEnd_toEndOf="@+id/newTask"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="98dp"
-        android:layout_marginRight="98dp"
-        android:layout_marginTop="17dp"
-        android:text="TextView"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editLocationButton"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <Button
-        android:id="@+id/editLocationButton"
+        android:id="@+id/textView10"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="77dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="142dp"
-        android:text="Edit"
-        app:layout_constraintBottom_toTopOf="@+id/taskOne"
+        android:layout_height="51dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="67dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/location"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/taskOne"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="115dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/saveTaskListButton"
-        app:layout_constraintStart_toStartOf="@+id/taskThree"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <EditText
-        android:id="@+id/taskTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/taskThree"
-        app:layout_constraintStart_toStartOf="@+id/taskOne"
-        app:layout_constraintTop_toBottomOf="@+id/taskOne" />
-
-    <Button
-        android:id="@+id/saveTaskListButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="109dp"
-        android:text="Save Task List"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taskOne" />
-
-    <EditText
-        android:id="@+id/taskThree"
-        android:layout_width="214dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="187dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taskTwo" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="17dp"
-        android:text="Add Tasks"
-        app:layout_constraintBottom_toTopOf="@+id/taskOne"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 </android.support.constraint.ConstraintLayout>
